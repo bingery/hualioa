@@ -1,0 +1,148 @@
+/* 
+    border-box宽高包含border padding content
+    content-box宽高仅仅是content 不是元素的全部
+    line-height撑起content 一般是font-size的1.3倍
+*/
+body{
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    font-family: Microsoft YaHei, Simsun;
+}
+
+
+div{
+    /* 默认 chrome
+    没有默认margin
+    font继承line-height继承
+    */
+    box-sizing: border-box;
+}
+p{
+    /* 默认 chrome
+    上下margin 1em
+    font继承line-height继承
+    white-space: nowrap;不换行
+    word-wrap: break-word;允许一个长单词被打断换行
+    */
+    margin: 0;
+}
+span{
+    /* 默认 chrome
+    font继承line-height继承
+    line-height无用 height无用
+    */
+}
+input{
+    /* 默认 chrome
+    width 147px
+    2px border 
+    1px padding
+    font不继承
+    line-height无用 所以用height
+    */
+    outline: none; 
+    border: 0;
+    padding: 0;
+    font-size: inherit;
+    /* height: 80px; */
+    box-sizing: border-box;
+}
+ul { 
+    /* 默认 chrome
+    上下margin 1em
+    左padding 40px
+    font继承line-height继承
+    */
+    list-style: none; 
+    padding-left: 0;
+    margin: 0;
+}
+li{
+    box-sizing: border-box;
+}
+h1, h2, h4{
+    /* 默认 chrome
+    上下margin 1em
+    font不继承32,24,16pxline-height继承
+    */
+    margin: 0;
+}
+
+textarea{
+    /* 默认 chrome
+    border 1
+    padding 2
+    默认content-box
+    font不继承line-height不继承
+    */
+    outline: none;
+    resize: none;
+    text-indent: 2em;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    line-height: inherit;
+    width: 20em;
+    height: 5em;
+}
+select{
+    /* 默认 chrome
+    border 1
+    默认border-box
+    font不继承
+    line-height无用 所以用height
+    默认消不掉的padding 所以height要大
+    默认背景色;
+    */
+    outline: none;
+    font-size: inherit;
+    height: 20px;
+    border: 0;
+    background: white;
+}
+/* button{ */
+    /* 默认 chrome
+    padding 1 7 2 7px
+    border 1
+    默认border-box
+    font不继承line-height不继承
+    */
+    /* outline: none;
+    border: 0;
+    background: lightblue;
+    font-size: inherit;
+    line-height: inherit;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+
+} */
+.button{
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+
+    color: white;
+    background: #008dff;
+
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+dd,dl{
+    margin: 0;
+}
+
+
+
+
+
+
+
